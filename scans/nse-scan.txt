@@ -1,0 +1,156 @@
+# Nmap 7.99 scan initiated Tue Sep  1 09:21:38 2026 as: /usr/lib/nmap/nmap --privileged -sV --script default,safe -p 135,139,445,9468 -oN /home/ankit/nmap-nse-scan.txt 192.168.250.128
+Pre-scan script results:
+| broadcast-listener: 
+|   udp
+|       DHCP
+|         srv ip           cli ip           mask           gw  dns            vendor
+|         192.168.250.254  192.168.250.130  255.255.255.0  -   192.168.250.1  -
+|       Browser
+|         ip               src  dst
+|_        192.168.250.128       
+| broadcast-igmp-discovery: 
+|   192.168.250.1
+|     Interface: eth0
+|     Version: 2
+|     Group: 224.0.0.251
+|     Description: mDNS (rfc6762)
+|   192.168.250.1
+|     Interface: eth0
+|     Version: 2
+|     Group: 224.0.0.252
+|     Description: Link-local Multicast Name Resolution (rfc4795)
+|   192.168.250.1
+|     Interface: eth0
+|     Version: 2
+|     Group: 239.255.255.250
+|     Description: Organization-Local Scope (rfc2365)
+|_  Use the newtargets script-arg to add the results as targets
+|_broadcast-xdmcp-discover: ERROR
+| knx-gateway-discover: 
+|_ ERROR: Couldn't get interface for 224.0.23.12
+| eap-info: 
+| Available authentication methods with identity="anonymous" on interface eth0
+|   unknown  EAP-TTLS
+|   unknown  EAP-TLS
+|   unknown  EAP-MSCHAP-V2
+|_  unknown  PEAP
+| targets-sniffer: Sniffed 12 address(es). 
+| 224.0.0.1
+| fe80::20c:29ff:fe58:5829
+| fe80::5400:711c:7489:bb05
+| fe80::280b:59c9:d9e9:15f4
+| 0.0.0.0
+| 192.168.250.254
+| 192.168.250.130
+| 192.168.250.1
+| 224.0.0.251
+| 239.255.255.250
+| 224.0.0.252
+|_192.168.250.128
+| broadcast-dhcp-discover: 
+|   Response 1 of 1: 
+|     Interface: eth0
+|     IP Offered: 192.168.250.130
+|     Server Identifier: 192.168.250.254
+|     Subnet Mask: 255.255.255.0
+|     Domain Name Server: 192.168.250.1
+|     Domain Name: localdomain
+|_    Broadcast Address: 192.168.250.255
+|_http-robtex-shared-ns: *TEMPORARILY DISABLED* due to changes in Robtex's API. See https://www.robtex.com/api/
+| targets-ipv6-multicast-mld: 
+|   IP: fe80::280b:59c9:d9e9:15f4  MAC: 00:50:56:c0:00:01  IFACE: eth0
+|   IP: fe80::5400:711c:7489:bb05  MAC: 00:0c:29:96:92:18  IFACE: eth0
+| 
+|_  Use --script-args=newtargets to add the results as targets
+| targets-asn: 
+|_  targets-asn.asn is a mandatory parameter
+|_hostmap-robtex: *TEMPORARILY DISABLED* due to changes in Robtex's API. See https://www.robtex.com/api/
+Nmap scan report for 192.168.250.128
+Host is up (0.00071s latency).
+
+PORT     STATE    SERVICE       VERSION
+135/tcp  open     msrpc         Microsoft Windows RPC
+139/tcp  open     netbios-ssn   Microsoft Windows netbios-ssn
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+445/tcp  open     microsoft-ds?
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+9468/tcp filtered unknown
+MAC Address: 00:0C:29:96:92:18 (VMware)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| qscan: 
+| PORT  FAMILY  MEAN (us)  STDDEV  LOSS (%)
+| 135   0       1036.90    223.19  0.0%
+| 139   0       961.00     129.16  0.0%
+|_445   0       1078.60    464.83  0.0%
+|_fcrdns: FAIL (No PTR record)
+| smb-protocols: 
+|   dialects: 
+|     2.0.2
+|     2.1
+|     3.0
+|     3.0.2
+|_    3.1.1
+| smb2-time: 
+|   date: 2026-09-01T14:22:30
+|_  start_date: N/A
+|_msrpc-enum: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+| dns-blacklist: 
+|   PROXY
+|     misc.dnsbl.sorbs.net - FAIL
+|     dnsbl.tornevall.org - FAIL
+|     tor.dan.me.uk - FAIL
+|     socks.dnsbl.sorbs.net - FAIL
+|     http.dnsbl.sorbs.net - FAIL
+|   SPAM
+|     bl.spamcop.net - FAIL
+|     list.quorum.to - FAIL
+|     l2.apews.org - FAIL
+|     all.spamrats.com - FAIL
+|     bl.nszones.com - FAIL
+|     dnsbl.inps.de - FAIL
+|     spam.dnsbl.sorbs.net - FAIL
+|     sbl.spamhaus.org - FAIL
+|   ATTACK
+|_    all.bl.blocklist.de - FAIL
+| smb-mbenum: 
+|_  ERROR: Failed to connect to browser service: Could not negotiate a connection:SMB: Failed to receive bytes: ERROR
+|_path-mtu: PMTU == 1500
+| port-states: 
+|   tcp: 
+|     open: 135,139,445
+|_    filtered: 9468
+|_clock-skew: -2s
+|_nbstat: NetBIOS name: DESKTOP-0MQ52K5, NetBIOS user: <unknown>, NetBIOS MAC: 00:0c:29:96:92:18 (VMware)
+|_ipidseq: Incremental!
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled and required
+| smb2-capabilities: 
+|   2.0.2: 
+|     Distributed File System
+|   2.1: 
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.0: 
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.0.2: 
+|     Distributed File System
+|     Leasing
+|     Multi-credit operations
+|   3.1.1: 
+|     Distributed File System
+|     Leasing
+|_    Multi-credit operations
+
+Post-scan script results:
+| reverse-index: 
+|   135/tcp: 192.168.250.128
+|   139/tcp: 192.168.250.128
+|_  445/tcp: 192.168.250.128
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep  1 09:23:16 2026 -- 1 IP address (1 host up) scanned in 98.07 seconds

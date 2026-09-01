@@ -1,0 +1,8 @@
+# OS/editor files
+Thumbs.db
+.DS_Store
+*.swp
+
+# Nmap temporary files
+*.log
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.99 scan initiated Tue Sep  1 09:39:45 2026 as: /usr/lib/nmap/nmap -sS -sV -O -&#45;reason -p 135,139,445,9468 -oA /home/ankit/nmap-final-report 192.168.250.128 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -sS -sV -O -&#45;reason -p 135,139,445,9468 -oA /home/ankit/nmap-final-report 192.168.250.128" start="1788273585" startstr="Tue Sep  1 09:39:45 2026" version="7.99" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="4" services="135,139,445,9468"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.250.128" addrtype="ipv4"/>
+<address addr="00:0C:29:96:92:18" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1788273589" endtime="1788273601"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.250.128" addrtype="ipv4"/>
+<address addr="00:0C:29:96:92:18" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9468"><state state="filtered" reason="no-response" reason_ttl="0"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="135"/>
+<osmatch name="Microsoft Windows 11 24H2" accuracy="97" line="76649">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="11" accuracy="97"><cpe>cpe:/o:microsoft:windows_11</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 11 21H2" accuracy="94" line="76469">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="11" accuracy="94"><cpe>cpe:/o:microsoft:windows_11</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10 1703 or Windows 11 21H2 - 23H2" accuracy="90" line="75881">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="90"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="11" accuracy="90"><cpe>cpe:/o:microsoft:windows_11</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2022" accuracy="90" line="83174">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2022" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2022</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10" accuracy="90" line="75331">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="90"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10 1607" accuracy="89" line="75707">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="89"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 SP1" accuracy="88" line="81702">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="88"><cpe>cpe:/o:microsoft:windows_server_2008::sp1</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Phone 7.5 or 8.0" accuracy="88" line="86073">
+<osclass type="phone" vendor="Microsoft" osfamily="Windows" osgen="Phone" accuracy="88"><cpe>cpe:/o:microsoft:windows</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="2721" lastboot="Tue Sep  1 08:54:40 2026"/>
+<distance value="1"/>
+<tcpsequence index="263" difficulty="Good luck!" values="323A7B4F,C6FFB9A,CFFFE37,AEFA155B,5469B83B,5123062A"/>
+<ipidsequence class="Incremental" values="C20F,C210,C211,C212,C213,C214"/>
+<tcptssequence class="1000HZ" values="2983AC,298411,298475,298520,29853E,2985A3"/>
+<times srtt="8063" rttvar="13454" to="100000"/>
+</host>
+<runstats><finished time="1788273601" timestr="Tue Sep  1 09:40:01 2026" summary="Nmap done at Tue Sep  1 09:40:01 2026; 1 IP address (1 host up) scanned in 16.77 seconds" elapsed="16.77" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

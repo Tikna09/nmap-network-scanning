@@ -1,0 +1,12 @@
+# Nmap 7.99 scan initiated Tue Sep  1 09:31:59 2026 as: /usr/lib/nmap/nmap -sA -p 135,139,445,9468 -oN /home/ankit/nmap-firewall.txt 192.168.250.128
+Nmap scan report for 192.168.250.128
+Host is up (0.00049s latency).
+
+PORT     STATE    SERVICE
+135/tcp  filtered msrpc
+139/tcp  filtered netbios-ssn
+445/tcp  filtered microsoft-ds
+9468/tcp filtered unknown
+MAC Address: 00:0C:29:96:92:18 (VMware)
+
+# Nmap done at Tue Sep  1 09:32:05 2026 -- 1 IP address (1 host up) scanned in 6.00 seconds

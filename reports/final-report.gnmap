@@ -1,0 +1,4 @@
+# Nmap 7.99 scan initiated Tue Sep  1 09:39:45 2026 as: /usr/lib/nmap/nmap -sS -sV -O --reason -p 135,139,445,9468 -oA /home/ankit/nmap-final-report 192.168.250.128
+Host: 192.168.250.128 ()	Status: Up
+Host: 192.168.250.128 ()	Ports: 135/open/tcp//msrpc//Microsoft Windows RPC/, 139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 445/open/tcp//microsoft-ds?///, 9468/filtered/tcp/////	Seq Index: 263	IP ID Seq: Incremental
+# Nmap done at Tue Sep  1 09:40:01 2026 -- 1 IP address (1 host up) scanned in 16.77 seconds

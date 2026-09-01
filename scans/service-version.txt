@@ -1,0 +1,14 @@
+# Nmap 7.99 scan initiated Tue Sep  1 09:09:04 2026 as: /usr/lib/nmap/nmap --privileged -sV -p 135,139,445,9468 -oN /home/ankit/nmap-service-version.txt 192.168.250.128
+Nmap scan report for 192.168.250.128
+Host is up (0.00068s latency).
+
+PORT     STATE    SERVICE       VERSION
+135/tcp  open     msrpc         Microsoft Windows RPC
+139/tcp  open     netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open     microsoft-ds?
+9468/tcp filtered unknown
+MAC Address: 00:0C:29:96:92:18 (VMware)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep  1 09:09:17 2026 -- 1 IP address (1 host up) scanned in 12.56 seconds
